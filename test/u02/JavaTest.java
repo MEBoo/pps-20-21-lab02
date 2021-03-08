@@ -7,4 +7,19 @@ public class JavaTest {
     public void someTest(){
         assert(true);
     }
+
+
+    /*
+    @Test def testFind() {
+        // ARRANGE (YOUR IMPL)
+        val f: <type> = ???
+        // OR
+        def m(...): <type> = ???
+        // (ACT + ASSERT)
+        // See examples in slides
+        assertEquals(<expected>, f(...))
+    }
+    */
 }
+
+
