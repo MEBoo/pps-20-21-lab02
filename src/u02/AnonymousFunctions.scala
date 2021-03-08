@@ -33,8 +33,7 @@ object AnonymousFunctions extends App {
 
   println(i(10, _ + 1, _ * 2)) // 21
 
-  val l: (Int => Int) => (Int => Int) =
-    (f => (i => f(f(i))))
+  val l: (Int => Int) => (Int => Int) = (f => (i =>   f(f(i))  ))
 
   println(l(_+1)(10)) // 12, see currying next..
 

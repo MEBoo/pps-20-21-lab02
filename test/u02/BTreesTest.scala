@@ -12,6 +12,7 @@ class BTreesTest {
     assertEquals(2, count(tree,1))
     assertEquals(1, count(tree,2))
     assertEquals(0, count(tree,3))
+
   }
 
   @Test def testSize(){
