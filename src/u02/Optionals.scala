@@ -27,9 +27,9 @@ object Optionals extends App {
       case _ => None()
     }
 
-    // non ho capito bene il testo dell'esercizio - se presente trasformare in Some(true) ?
-    def map[A](opt: Option[A])(f:A => Boolean): Option[Boolean] = opt match {
-      case Some(a) if f(a) => Some(true)
+
+    def map[A,B](opt: Option[A])(f:A => B): Option[B] = opt match {
+      case Some(a) => Some(f(a))
       case _ => None()
     }
 
