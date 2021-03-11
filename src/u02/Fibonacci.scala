@@ -11,12 +11,9 @@ object Fibonacci extends App{
   // versione con somma in avanti di un numero fib + il precedente fib
   def fibTail(n: Int): Int = {
     @annotation.tailrec
-    def _fibTail(n: Int, prev: Int, current: Int): Int = {
-      if (n <= 0) {
-        current
-      } else {
-        _fibTail(n - 1, prev + current, prev)
-      }
+    def _fibTail(n: Int, prev: Int, current: Int): Int = n match {
+      case n if n<=0 => current
+      case _ => _fibTail(n - 1, prev + current, prev)
     }
     _fibTail(n, 1, 0)
   }
