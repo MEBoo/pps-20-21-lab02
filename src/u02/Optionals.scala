@@ -27,18 +27,14 @@ object Optionals extends App {
       case _ => None()
     }
 
-
     def map[A,B](opt: Option[A])(f:A => B): Option[B] = opt match {
       case Some(a) => Some(f(a))
       case _ => None()
     }
 
-    def map2[A](opt1: Option[A],opt2: Option[A])(f:(A,A) => A): Option[A] = opt1 match {
-      case None() => None();
-      case Some(a) => opt2 match {
-        case None() => None();
-        case Some(b) => Some(f(a,b))
-      }
+    def map2[A](opt1: Option[A],opt2: Option[A])(f:(A,A) => A): Option[A] = (opt1,opt2) match {
+      case (Some(a),Some(b)) => Some(f(a,b))
+      case _ => None();
     }
   }
 
